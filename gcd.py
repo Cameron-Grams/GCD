@@ -9,15 +9,26 @@ def just_facts(number):
     while test_num > 1:
         while (test_num % i == 0):
             test_num = factors(test_num, i)   
-            print(test_num)
             pfact_list.append(i)          
         i += 1
 
     return pfact_list
 
 
+def gcd(first_num, second_num):
+    factor_list = []
+
+    first_facts = just_facts(first_num)
+    second_facts = just_facts(second_num)
+
+    print(first_facts)
+    print(second_facts)
 
 
-print(just_facts(13))
-print(just_facts(24))
-print(just_facts(78))
+    test_index = min(len(first_facts), len(second_facts))
+    print(test_index)
+
+
+
+
+gcd(8, 25)
