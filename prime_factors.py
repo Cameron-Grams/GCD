@@ -1,5 +1,5 @@
-def factors(number, denomenator):
-    return number//denomenator
+def factors(number, denominator):
+    return number//denominator
 
 def just_facts(number):
     pfact_list = [1]
