@@ -17,7 +17,3 @@ def just_facts(number):
 
 
 
-
-print(just_facts(13))
-print(just_facts(24))
-print(just_facts(78))

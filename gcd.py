@@ -16,6 +16,7 @@ def just_facts(number):
 
 
 def gcd(first_num, second_num):
+    gcd = 1
     factor_list = []
 
     first_facts = just_facts(first_num)
@@ -26,9 +27,23 @@ def gcd(first_num, second_num):
 
 
     test_index = min(len(first_facts), len(second_facts))
-    print(test_index)
+#    print(test_index)
 
+    if (len(first_facts) < len(second_facts)):
+        test_list = first_facts
+        other_list = second_facts
+    else:
+        test_list = second_facts
+        other_list = first_facts
 
+    for i in range(test_index):
+        if test_list[i] in other_list:
+            factor_list.append(test_list[i])
 
+#    print(factor_list)
 
-gcd(8, 25)
+    for j in factor_list:
+        gcd = gcd * j
+
+    print(gcd)
+
